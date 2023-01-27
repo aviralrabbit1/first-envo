@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">mvp3</string>
+    <string name="login">Login</string>
+    <string name="already">Alread have an account?</string>
+    <string name="EnterName">Enter your name</string>
+    <string name="EnterPassword">Enter your password</string>
+    <string name="repassword">Re-enter your password</string>
+    <string name="EnterEmail">Enter your email</string>
+    <string name="sign_up">Sign up</string>
+    <string-array name="Country_Name">
+        <item>India</item>
+        <item>USA</item>
+        <item>France</item>
+        <item>UK</item>
+    </string-array>
 </resources>

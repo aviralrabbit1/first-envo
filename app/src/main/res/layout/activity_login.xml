@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/white_btn"
-    tools:context=".SignupActivity">
+    tools:context=".LoginActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -60,21 +60,6 @@
                     android:text="We do bakchodi full time" />
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName3"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="32dp"
-                    android:layout_marginEnd="32dp"
-                    android:background="@drawable/grey_bgr"
-                    android:ems="10"
-                    android:hint="@string/EnterName"
-                    android:inputType="textPersonName"
-                    android:padding="10dp"
-                    android:textColor="#858585"
-                    android:textSize="16sp" />
-
-                <EditText
                     android:id="@+id/editTextTextPersonName"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
@@ -82,7 +67,7 @@
                     android:layout_marginEnd="32dp"
                     android:layout_marginStart="32dp"
                     android:layout_marginTop="32dp"
-                    android:hint="@string/EnterEmail"
+                    android:hint="Enter your email"
                     android:textSize="16sp"
                     android:textColor="#858585"
                     android:padding="10dp"
@@ -96,30 +81,15 @@
                     android:layout_marginEnd="32dp"
                     android:layout_marginStart="32dp"
                     android:layout_marginTop="32dp"
-                    android:hint="@string/EnterPassword"
+                    android:hint="Enter your password"
                     android:textSize="16sp"
                     android:textColor="#858585"
                     android:padding="10dp"
                     android:inputType="textPassword"
                     android:background="@drawable/grey_bgr"/>
 
-                <EditText
-                    android:id="@+id/editTextTextPersonPassword2"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="32dp"
-                    android:layout_marginEnd="32dp"
-                    android:background="@drawable/grey_bgr"
-                    android:ems="10"
-                    android:hint="@string/repassword"
-                    android:inputType="textPassword"
-                    android:padding="10dp"
-                    android:textColor="#130101"
-                    android:textSize="16sp" />
-
                 <Button
-                    android:id="@+id/button2"
+                    android:id="@+id/ActualLogin"
                     style="@android:style/Widget.Button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -127,38 +97,86 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginEnd="32dp"
                     android:background="@drawable/purple_bgr"
-                    android:text="@string/sign_up"
+                    android:text="Login"
                     android:textSize="16sp"
                     android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#04336a"
+                    android:textAlignment="viewEnd"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="32dp"
+                    android:text="Forgot Passoword?" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="#707070"
+                    android:layout_height="3dp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textAlignment="center"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="32dp"
                     android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/textView9"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="32dp"
-                        android:layout_marginTop="16dp"
-                        android:textAlignment="viewEnd"
-                        android:text="@string/already"
-                        android:textColor="#04336a" />
-
                     <Button
-                        android:id="@+id/RedirectToLoginPage"
-                        style="@android:style/Widget.Material.Light.Button.Borderless"
+                        android:id="@+id/button3"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:layout_weight="1"
-                        android:textColor="#04336a"
-                        android:text="@string/login" />
+                        android:layout_weight="0.5"
+                        android:background="@drawable/grey_bgr"
+                        android:padding="10dp"
+                        android:text="Google"
+                        android:textColor="#123456"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/button4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/grey_bgr"
+                        android:layout_marginStart="32dp"
+                        android:padding="10dp"
+                        android:text="Facebook"
+                        android:textColor="#123456"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
+<!--                <TextView-->
+<!--                    android:id="@+id/textView9"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="16dp"-->
+<!--                    android:layout_marginEnd="32dp"-->
+<!--                    android:layout_marginStart="32dp"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:text="Don't have an account? Sign up"-->
+<!--                    android:textColor="#04336a" />-->
+                <Button
+                    android:id="@+id/RedirectToSignupPage"
+                    style="@android:style/Widget.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/purple_bgr"
+                    android:text="Don't have an account? Sign up"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    />
             </LinearLayout>
         </ScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
