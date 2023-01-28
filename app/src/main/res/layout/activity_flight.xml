@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mvp3.Flight">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/selectNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="Pick Number ..."
+        android:textSize="18sp" />
+
+    <NumberPicker
+        android:id="@+id/numPicker"
+        android:layout_margin="16dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/selectNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:id="@+id/lineBtn"
+        android:layout_below="@+id/numPicker"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#f2f2f2" />
+
+    <TextView
+        android:id="@+id/selectText"
+        android:text="Pick Value ... "
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_below="@+id/lineBtn"
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <NumberPicker
+        android:id="@+id/txtPicker"
+        android:layout_margin="16dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/selectText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/ConfirmFlight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtPicker"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="96dp"
+        android:text="Button" />
+
+</RelativeLayout>

@@ -13,36 +13,35 @@ import android.widget.Button;
 
 import java.util.Collections;
 
-public class DropdownCountry extends AppCompatActivity {
-    Button confirmcountry;
+public class DropdownHouse extends AppCompatActivity {
+    Button confirmhouse;
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dropdown_country);
+        setContentView(R.layout.activity_dropdown_house);
 
-        String[] languages = getResources().getStringArray(R.array.Country_Name);
+        String[] house_size = getResources().getStringArray(R.array.House_size);
         @SuppressLint("ResourceType") ArrayAdapter<String> adapter = new ArrayAdapter<String>
-                (this, android.R.layout.select_dialog_item, languages);
+                (this, android.R.layout.select_dialog_item, house_size);
         //Getting the instance of AutoCompleteTextView
         AutoCompleteTextView actv = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextView);
         actv.setThreshold(1);//will start working from first character
         actv.setAdapter(adapter);//setting the adapter data into the AutoCompleteTextView
         actv.setTextColor(Color.RED);
 
-        confirmcountry = (Button) findViewById(R.id.ConfirmCountry);
-        confirmcountry.setOnClickListener(new View.OnClickListener() {
+        confirmhouse = (Button) findViewById(R.id.ConfirmHouse);
+        confirmhouse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openHouseActivity();
+                openFlightActivity();
             }
         });
 
-
     }
-    public void openHouseActivity(){
-        Intent intent = new Intent(this, DropdownHouse.class);
+    public void openFlightActivity(){
+        Intent intent = new Intent(this, Flight.class);
         startActivity(intent);
     }
 }

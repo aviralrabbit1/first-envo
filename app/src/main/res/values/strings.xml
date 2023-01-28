@@ -13,4 +13,12 @@
         <item>France</item>
         <item>UK</item>
     </string-array>
+    <string-array name="House_size">
+        <item>I\'m broke af (shared room)</item>
+        <item>Studio(Eco-lover)</item>
+        <item>1BHK</item>
+        <item>2BHK</item>
+        <item>3BHK</item>
+        <item>I\'m super rich(F*** nature)</item>
+    </string-array>
 </resources>
