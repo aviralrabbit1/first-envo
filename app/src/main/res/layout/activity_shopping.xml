@@ -7,70 +7,81 @@
     tools:context=".Shopping">
 
     <EditText
-        android:id="@+id/editFirstName"
+        android:id="@+id/edit_no_of_clothes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="168dp"
+        android:gravity="center"
         android:autofillHints="First Name"
         android:ems="10"
-        android:hint="First Name"
+        android:hint="No. of clothing items bought"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/NoOfClothes"
+        app:layout_constraintStart_toStartOf="@+id/NoOfClothes"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editLastName"
+        android:gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="68dp"
         android:ems="10"
         android:hint="Last Name"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textColorHint="#757575"
-        app:layout_constraintEnd_toEndOf="@+id/editFirstName"
-        app:layout_constraintStart_toStartOf="@+id/editFirstName"
-        app:layout_constraintTop_toBottomOf="@+id/editFirstName" />
+        app:layout_constraintEnd_toEndOf="@+id/edit_no_of_clothes"
+        app:layout_constraintStart_toStartOf="@+id/edit_no_of_clothes"
+        app:layout_constraintTop_toBottomOf="@+id/NoOfGadgets" />
 
     <Button
         android:id="@+id/registerBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="68dp"
         android:onClick="onRegisterBtnClick"
         android:text="Register"
-        tools:layout_editor_absoluteX="152dp"
-        tools:layout_editor_absoluteY="328dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editLastName" />
 
     <TextView
-        android:id="@+id/firstNameView"
+        android:id="@+id/NoOfClothes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="41dp"
-        android:text="First Name"
-        app:layout_constraintEnd_toEndOf="@+id/registerBtn"
-        app:layout_constraintStart_toStartOf="@+id/registerBtn"
-        app:layout_constraintTop_toBottomOf="@+id/registerBtn" />
+        android:layout_marginTop="68dp"
+        android:gravity="center"
+        android:layout_marginStart="80dp"
+        android:textSize="20sp"
+        android:text="No. of clothing items bought"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/LastNameView"
+        android:id="@+id/NoOfGadgets"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="47dp"
-        android:text="Last Name"
-        app:layout_constraintEnd_toEndOf="@+id/firstNameView"
-        app:layout_constraintStart_toStartOf="@+id/firstNameView"
-        app:layout_constraintTop_toBottomOf="@+id/firstNameView" />
+        android:layout_marginTop="68dp"
+        android:gravity="center"
+        android:text="No. of Gadgets items bought"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/NoOfClothes"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edit_no_of_clothes"
+        app:layout_constraintTop_toBottomOf="@+id/edit_no_of_clothes" />
 
     <Button
         android:id="@+id/buttontotwo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:layout_marginTop="105dp"
+        android:text="Result"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="578dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
