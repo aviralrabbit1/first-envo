@@ -8,10 +8,10 @@
     <string name="EnterEmail">Enter your email</string>
     <string name="sign_up">Sign up</string>
     <string-array name="Country_Name">
-        <item>India</item>
-        <item>USA</item>
-        <item>France</item>
-        <item>UK</item>
+        <item>India 🇮🇳</item>
+        <item>USA 🇱🇷</item>
+        <item>France 🇳🇱</item>
+        <item>UK 🇬🇧</item>
     </string-array>
     <string-array name="House_size">
         <item>I\'m broke af (shared room)</item>

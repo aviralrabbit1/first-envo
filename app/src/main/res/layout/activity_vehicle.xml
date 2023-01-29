@@ -6,36 +6,15 @@
     android:layout_height="match_parent"
     tools:context="com.example.mvp3.Flight">
 
-    <TextView
-        android:id="@+id/selectNumber"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:gravity="center"
-        android:text="No. of flights less than 3 hours"
-        android:textSize="18sp" />
-
-    <NumberPicker
-        android:id="@+id/numPicker"
-        android:layout_margin="16dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/selectNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
     <View
         android:id="@+id/lineBtn"
-        android:layout_below="@+id/numPicker"
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="#f2f2f2" />
 
     <TextView
-        android:id="@+id/selectText"
-        android:text="No. of flights taking 3 to 6 hours"
+        android:id="@+id/SelectedVehicle"
+        android:text="You choice of vehicle"
         android:textSize="18sp"
         android:gravity="center"
         android:layout_below="@+id/lineBtn"
@@ -44,19 +23,38 @@
         android:layout_height="wrap_content" />
 
     <NumberPicker
-        android:id="@+id/txtPicker"
-        android:layout_margin="16dp"
+        android:id="@+id/VehiclePicker"
+        android:layout_margin="60dp"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/selectText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/howmanykms"
+        android:text="No. of kms travelled in one day"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_marginTop="300dp"
+        android:layout_marginStart="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.google.android.material.slider.Slider
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="400dp"
+        android:valueFrom="0"
+        android:valueTo="200"
+        android:stepSize="1"
+        android:value="1"
+        />
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/ConfirmFlight"
+            android:id="@+id/ConfirmVehicle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="550dp"
