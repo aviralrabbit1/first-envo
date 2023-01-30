@@ -2,6 +2,7 @@ package com.example.mvp3;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,14 +14,25 @@ import android.widget.TextView;
 import android.widget.TextView;
 
 public class Flight extends AppCompatActivity {
+    Button todiet;
     int minteger = 0;
     int minteger2 = 0;
     int minteger3 = 0;
     int minteger4 = 0;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_flight);
+
+        todiet = (Button) findViewById(R.id.ToDiet);
+        todiet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Flight.this,Diet.class);
+                startActivity(intent);
+            }
+        });
     }
 
     public void increaseInteger(View view) {

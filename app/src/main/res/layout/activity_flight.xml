@@ -15,7 +15,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:padding="5dp"
         android:gravity="center"
         android:orientation="horizontal">
@@ -30,7 +30,7 @@
         <TextView
             android:id="@+id/integer_number"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:layout_marginBottom="16dp"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"
@@ -57,7 +57,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="120dp"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -71,7 +71,7 @@
         <TextView
             android:id="@+id/integer_number2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:layout_marginBottom="16dp"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"
@@ -98,7 +98,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="120dp"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -112,7 +112,7 @@
         <TextView
             android:id="@+id/integer_number3"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:layout_marginBottom="16dp"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"
@@ -139,7 +139,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="120dp"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -153,7 +153,7 @@
         <TextView
             android:id="@+id/integer_number4"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:layout_marginBottom="16dp"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"
@@ -169,7 +169,17 @@
             android:onClick="increaseInteger4"
             android:text="+" />
 
+
     </LinearLayout>
+
+    <Button
+        android:id="@+id/ToDiet"
+        android:layout_width="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:gravity="center"
+        android:text="Next ->" />
 
 
 </LinearLayout>
