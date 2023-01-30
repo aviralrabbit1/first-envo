@@ -1,5 +1,6 @@
 package com.example.mvp3;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -9,6 +10,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.NumberPicker;
 import android.widget.TextView;
+
+import com.google.android.material.slider.LabelFormatter;
+import com.google.android.material.slider.Slider;
+
+import java.text.NumberFormat;
 
 
 public class Vehicle extends AppCompatActivity {
@@ -29,14 +35,27 @@ public class Vehicle extends AppCompatActivity {
         confirmvehicle = (Button) findViewById(R.id.ConfirmVehicle);
         confirmvehicle.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                openDietActivity();
-            }
-        });
+            public void onClick(View v) {openDietActivity();}});
 
 
         selectedVehicle = (TextView) findViewById(R.id.SelectedVehicle);
         vehiclePicker = (NumberPicker) findViewById(R.id.VehiclePicker);
+
+        Slider slider = (Slider) findViewById(R.id.kmsSlider);
+        TextView howManyKms = findViewById(R.id.howmanykms);
+//        int kms = (int) slider.getValue();
+
+        slider.setLabelFormatter(new LabelFormatter() {
+            @NonNull
+            @Override
+            public String getFormattedValue(float value) {
+                NumberFormat kms = NumberFormat.getNumberInstance();
+                howManyKms.setText("Distance Travelled in one day: " + kms.format(value)+ " kms");
+
+                return kms.format(value) + " kms";
+
+            }
+        });
 
 
         //Populate NumberPicker values from minimum and maximum value range

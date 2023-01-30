@@ -40,6 +40,7 @@
         android:layout_height="wrap_content" />
 
     <com.google.android.material.slider.Slider
+        android:id="@+id/kmsSlider"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="400dp"
@@ -50,7 +51,7 @@
         app:thumbRadius="12dp"
         app:tickVisible="true"
         android:scrollbarSize="@dimen/cardview_default_radius"
-        app:haloColor="@color/cardview_dark_background"
+        app:haloColor="@android:color/holo_orange_light"
         android:stepSize="1"
         android:value="1"
         />
