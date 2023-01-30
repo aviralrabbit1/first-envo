@@ -1,71 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.mvp3.Flight">
+    android:layout_margin="16dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".Flight">
 
     <TextView
-        android:id="@+id/selectNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No. of flights with less than 3 hours " />
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:padding="5dp"
         android:gravity="center"
-        android:text="No. of flights less than 3 hours"
-        android:textSize="18sp" />
-
-    <NumberPicker
-        android:id="@+id/numPicker"
-        android:layout_margin="16dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/selectNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <View
-        android:id="@+id/lineBtn"
-        android:layout_below="@+id/numPicker"
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="#f2f2f2" />
-
-    <TextView
-        android:id="@+id/selectText"
-        android:text="No. of flights taking 3 to 6 hours"
-        android:textSize="18sp"
-        android:gravity="center"
-        android:layout_below="@+id/lineBtn"
-        android:layout_margin="16dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <NumberPicker
-        android:id="@+id/txtPicker"
-        android:layout_margin="16dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/selectText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:orientation="horizontal">
 
         <Button
-            android:id="@+id/ConfirmFlight"
+            android:id="@+id/decrease"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:onClick="decreaseInteger"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/integer_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="550dp"
-            android:layout_marginStart="160dp"
-            android:layout_weight="1"
-            android:text="Confirm"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-    </FrameLayout>
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="16dp"
+            android:text="0"
+            android:textStyle="bold"
+            android:textSize="70sp" />
 
-</RelativeLayout>
+        <Button
+            android:id="@+id/increase"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:onClick="increaseInteger"
+            android:text="+" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="No. of flights with 3 to 6 hours " />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/decrease2"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:onClick="decreaseInteger2"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/integer_number2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="16dp"
+            android:text="0"
+            android:textStyle="bold"
+            android:textSize="70sp" />
+
+        <Button
+            android:id="@+id/increase2"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:onClick="increaseInteger2"
+            android:text="+" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="No. of flights with 6 to 9 hours " />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/decrease3"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:onClick="decreaseInteger3"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/integer_number3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="16dp"
+            android:text="0"
+            android:textStyle="bold"
+            android:textSize="70sp" />
+
+        <Button
+            android:id="@+id/increase3"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:onClick="increaseInteger3"
+            android:text="+" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="No. of flights more than 9 hours " />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/decrease4"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:onClick="decreaseInteger4"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/integer_number4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="16dp"
+            android:text="0"
+            android:textStyle="bold"
+            android:textSize="70sp" />
+
+        <Button
+            android:id="@+id/increase4"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:onClick="increaseInteger4"
+            android:text="+" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

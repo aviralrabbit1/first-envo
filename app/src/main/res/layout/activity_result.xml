@@ -1,9 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Result">
+    tools:context="com.example.mvp3.Result">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/selectNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="No. of flights less than 3 hours"
+        android:textSize="18sp" />
+
+
+    <com.google.android.material.slider.Slider
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="400dp"
+        android:valueFrom="0"
+        android:valueTo="200"
+        app:haloRadius="10dp"
+        app:minTouchTargetSize="10dp"
+        app:thumbRadius="12dp"
+        app:tickVisible="true"
+        android:scrollbarSize="@dimen/cardview_default_radius"
+        app:haloColor="@color/cardview_dark_background"
+        android:stepSize="1"
+        android:value="1"
+        />
+
+    <View
+        android:id="@+id/lineBtn"
+        android:layout_width="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_height="2dp"
+        android:background="#f2f2f2" />
+
+    <TextView
+        android:id="@+id/selectText"
+        android:text="No. of flights taking 3 to 6 hours"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_below="@+id/lineBtn"
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.google.android.material.slider.Slider
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="400dp"
+        android:valueFrom="0"
+        android:valueTo="200"
+        app:haloRadius="10dp"
+        app:minTouchTargetSize="10dp"
+        app:thumbRadius="12dp"
+        app:tickVisible="true"
+        android:scrollbarSize="@dimen/cardview_default_radius"
+        app:haloColor="@color/cardview_dark_background"
+        android:stepSize="1"
+        android:value="1"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/ConfirmFlight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="550dp"
+            android:layout_marginStart="160dp"
+            android:layout_weight="1"
+            android:text="Confirm"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </FrameLayout>
+
+</RelativeLayout>

@@ -45,6 +45,12 @@
         android:layout_marginTop="400dp"
         android:valueFrom="0"
         android:valueTo="200"
+        app:haloRadius="10dp"
+        app:minTouchTargetSize="10dp"
+        app:thumbRadius="12dp"
+        app:tickVisible="true"
+        android:scrollbarSize="@dimen/cardview_default_radius"
+        app:haloColor="@color/cardview_dark_background"
         android:stepSize="1"
         android:value="1"
         />
