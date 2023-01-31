@@ -2,6 +2,7 @@ package com.example.mvp3;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,70 +11,33 @@ import android.widget.NumberPicker;
 import android.widget.TextView;
 
 
-public class Result extends AppCompatActivity {
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+import android.widget.Toast;
 
-    Button confirmflight;
-
-
-    TextView selectedNum, selectedTxt;
-    NumberPicker numberPicker, textPicker;
-
-
+public class Result extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+    String[] users = { "I'm broke af (shared room)", "Studio", "1BHK", "2BHK", "3BHK","I'm super rich" };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
-        confirmflight = (Button) findViewById(R.id.ConfirmFlight);
-        confirmflight.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openDietActivity();
-            }
-        });
-
-
-        selectedNum = (TextView) findViewById(R.id.selectNumber);
-        selectedTxt = (TextView) findViewById(R.id.selectText);
-
-
-        //Populate NumberPicker values from minimum and maximum value range
-        numberPicker.setMinValue(0);
-        numberPicker.setMaxValue(10);
-        numberPicker.setWrapSelectorWheel(true);
-
-        numberPicker.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
-            @Override
-            public void onValueChange(NumberPicker numberPicker, int i, int i1) {
-
-                selectedNum.setText("Selected Number : " + i1);
-
-            }
-        });
-
-
-        //Populate NumberPicker values from String array values
-        final String[] values = {"Cupcake", "Donut", "Eclair", "Froyo", "Gingerbread", "Honeycomb", "JellyBean", "Kitkat", "Lollipop", "Marshmallow", "Nougat", "Oreo"};
-
-        textPicker.setMinValue(0);
-        textPicker.setMaxValue(values.length - 1);
-        textPicker.setDisplayedValues(values);
-        textPicker.setWrapSelectorWheel(true);
-
-        textPicker.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
-            @Override
-            public void onValueChange(NumberPicker numberPicker, int i, int i1) {
-
-                selectedTxt.setText("Selected Text : " + values[i1]);
-
-            }
-        });
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"})
+        Spinner spin = (Spinner) findViewById(R.id.spinner1);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, users);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spin.setAdapter(adapter);
+        spin.setOnItemSelectedListener(this);
     }
-
-    public void openDietActivity(){
-        Intent intent = new Intent(this, Diet.class);
-        startActivity(intent);
+    @Override
+    public void onItemSelected(AdapterView<?> arg0, View arg1, int position,long id) {
+        Toast.makeText(getApplicationContext(), "Selected User: "+users[position] ,Toast.LENGTH_SHORT).show();
     }
-
+    @Override
+    public void onNothingSelected(AdapterView<?> arg0) {
+        // TODO - Custom Code
+    }
 }
 

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -44,4 +45,10 @@ public class Diet extends AppCompatActivity {
         Intent intent = new Intent(this, Vehicle.class);
         startActivity(intent);
     }
+
+//    public void onItemSelected(AdapterView<?> arg0, View view, int position, long id) {
+//        position = radioGroup.getCheckedRadioButtonId();
+//        dietRadioButtton = (RadioButton) findViewById(position);
+//        Toast.makeText(this, "Selected User: "+dietRadioButtton.getText() ,Toast.LENGTH_SHORT).show();
+//    }
 }

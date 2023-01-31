@@ -6,15 +6,20 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.Collections;
 
-public class DropdownHouse extends AppCompatActivity {
+public class DropdownHouse extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     Button confirmhouse;
+    String[] users = { "I'm broke af (shared room)", "Studio", "1BHK", "2BHK", "3BHK","I'm super rich" };
+
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -22,14 +27,12 @@ public class DropdownHouse extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dropdown_house);
 
-        String[] house_size = getResources().getStringArray(R.array.House_size);
-        @SuppressLint("ResourceType") ArrayAdapter<String> adapter = new ArrayAdapter<String>
-                (this, android.R.layout.select_dialog_item, house_size);
-        //Getting the instance of AutoCompleteTextView
-        AutoCompleteTextView actv = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextView);
-        actv.setThreshold(1);//will start working from first character
-        actv.setAdapter(adapter);//setting the adapter data into the AutoCompleteTextView
-        actv.setTextColor(Color.RED);
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"})
+        Spinner spin = (Spinner) findViewById(R.id.spinner1);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, users);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spin.setAdapter(adapter);
+        spin.setOnItemSelectedListener(this);
 
         confirmhouse = (Button) findViewById(R.id.ConfirmHouse);
         confirmhouse.setOnClickListener(new View.OnClickListener() {
@@ -43,5 +46,16 @@ public class DropdownHouse extends AppCompatActivity {
     public void openFlightActivity(){
         Intent intent = new Intent(this, Flight.class);
         startActivity(intent);
+    }
+    public void onItemSelected(AdapterView<?> arg0, View arg1, int position, long id) {
+        Toast.makeText(getApplicationContext(), "Selected User: "+users[position] ,Toast.LENGTH_SHORT).show();
+    }
+    public void onNothingSelected(AdapterView<?> arg0) {
+        // TODO - Custom Code
+    }
+
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+        super.onPointerCaptureChanged(hasCapture);
     }
 }
