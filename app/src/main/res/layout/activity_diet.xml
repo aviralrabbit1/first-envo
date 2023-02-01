@@ -34,6 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="140dp"
+        android:outlineSpotShadowColor="@color/black"
         android:id="@+id/radioGroup">
 
         <RadioButton
@@ -100,6 +101,14 @@
         android:layout_height="wrap_content"
         android:layout_gravity="right"
         android:text="Next ->" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="16dp"
+        android:text="How many food deliveries you order in a month?" />
 
 
 </LinearLayout>

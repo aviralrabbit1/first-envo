@@ -12,11 +12,13 @@ import android.widget.AutoCompleteTextView;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Collections;
 
 public class DropdownHouse extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+    int minteger = 0;
     Button confirmhouse;
     String[] users = { "I'm broke af (shared room)", "Studio", "1BHK", "2BHK", "3BHK","I'm super rich" };
 
@@ -43,12 +45,29 @@ public class DropdownHouse extends AppCompatActivity implements AdapterView.OnIt
         });
 
     }
+    public void increaseInteger(View view) {
+        minteger = minteger + 1;
+        display(minteger);
+
+    }public void decreaseInteger(View view) {
+        minteger = minteger - 1;
+        if(minteger<1){
+            minteger=1;
+        }
+        display(minteger);
+    }
+
+    private void display(int number) {
+        TextView displayInteger = (TextView) findViewById(
+                R.id.integer_number);
+        displayInteger.setText("" + number);
+    }
     public void openFlightActivity(){
         Intent intent = new Intent(this, Flight.class);
         startActivity(intent);
     }
     public void onItemSelected(AdapterView<?> arg0, View arg1, int position, long id) {
-        Toast.makeText(getApplicationContext(), "Selected User: "+users[position] ,Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "Selected Type of Residence: "+users[position] ,Toast.LENGTH_LONG).show();
     }
     public void onNothingSelected(AdapterView<?> arg0) {
         // TODO - Custom Code
