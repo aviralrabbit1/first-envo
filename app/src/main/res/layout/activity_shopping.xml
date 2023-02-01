@@ -6,82 +6,125 @@
     android:layout_height="match_parent"
     tools:context=".Shopping">
 
-    <EditText
-        android:id="@+id/edit_no_of_clothes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="168dp"
-        android:gravity="center"
-        android:autofillHints="First Name"
-        android:ems="10"
-        android:hint="No. of clothing items bought"
-        android:inputType="number"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="@+id/NoOfClothes"
-        app:layout_constraintStart_toStartOf="@+id/NoOfClothes"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editLastName"
-        android:gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:ems="10"
-        android:hint="Last Name"
-        android:inputType="number"
-        android:minHeight="48dp"
-        android:textColorHint="#757575"
-        app:layout_constraintEnd_toEndOf="@+id/edit_no_of_clothes"
-        app:layout_constraintStart_toStartOf="@+id/edit_no_of_clothes"
-        app:layout_constraintTop_toBottomOf="@+id/NoOfGadgets" />
 
     <Button
-        android:id="@+id/registerBtn"
+        android:id="@+id/ConfirmHouse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginTop="68dp"
-        android:onClick="onRegisterBtnClick"
-        android:text="Register"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editLastName" />
-
-    <TextView
-        android:id="@+id/NoOfClothes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:gravity="center"
-        android:layout_marginStart="80dp"
-        android:textSize="20sp"
-        android:text="No. of clothing items bought"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/NoOfGadgets"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:gravity="center"
-        android:text="No. of Gadgets items bought"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/NoOfClothes"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edit_no_of_clothes"
-        app:layout_constraintTop_toBottomOf="@+id/edit_no_of_clothes" />
-
-    <Button
-        android:id="@+id/buttontotwo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="105dp"
-        android:text="Result"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="280dp"
+        android:layout_weight="1"
+        android:text="Confirm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <TextView
+        android:id="@+id/txtVw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="47dp"
+        android:layout_marginBottom="29dp"
+        android:gravity="center"
+        android:text="Number of clothing item(s) bought this year"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtVw3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Number of gadget(s) bought this year"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginBottom="488dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtVw"
+        app:layout_constraintVertical_bias="0.147">
+
+        <Button
+            android:id="@+id/decrease"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:onClick="decreaseInteger"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/integer_number"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="16dp"
+            android:text="0"
+            android:textSize="70sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/increase"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:onClick="increaseInteger"
+            android:text="+" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/ConfirmHouse"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:layout_editor_absoluteX="28dp">
+
+        <Button
+            android:id="@+id/decrease2"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:onClick="decreaseInteger2"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/integer_number2"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="16dp"
+            android:text="0"
+            android:textSize="70sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/increase2"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:onClick="increaseInteger2"
+            android:text="+" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,114 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.mvp3.Diet">
+    tools:context=".Diet">
+
+
+    <RelativeLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:layout_marginTop="40dp"
+            android:text="Type of diet:"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txtVw"
+            android:layout_alignRight="@+id/txtVw"
+            android:layout_alignParentRight="@+id/txtVw"
+            android:layout_alignParentEnd="true"/>
+
+        <requestFocus />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/ConfirmHouse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Confirm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <TextView
-        android:id="@+id/textView1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:gravity="center_horizontal"
-        android:textSize="22dp"
-        android:text="Type of Diet" />
-
-
-
-    <!--   Default RadioButtons  -->
-
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="20dp"
-        android:background="#B8B894" />
-
-
-    <!--   Customized RadioButtons  -->
-
-
-    <RadioGroup
+        android:id="@+id/txtVw2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="140dp"
-        android:outlineSpotShadowColor="@color/black"
-        android:id="@+id/radioGroup">
-
-        <RadioButton
-            android:id="@+id/radioMale"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="  Vegan"
-            android:layout_marginTop="10dp"
-            android:checked="false"
-            android:textSize="20dp" />
-
-        <RadioButton
-            android:id="@+id/radioFemale"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="  Vegetarian"
-            android:layout_marginTop="20dp"
-            android:checked="false"
-            android:textSize="20dp" />
-
-        <RadioButton
-            android:id="@+id/radioFemale2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:checked="false"
-            android:text="  Pescatarian"
-            android:textSize="20dp" />
-
-        <RadioButton
-            android:id="@+id/radioFemale3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:checked="false"
-            android:text="  Omnivore"
-            android:textSize="20dp" />
-
-        <RadioButton
-            android:id="@+id/radioFemale4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:checked="false"
-            android:text="  Carnivore"
-            android:textSize="20dp" />
-    </RadioGroup>
-
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Show Selected"
-        android:id="@+id/button"
-        android:onClick="onclickbuttonMethod"
-        android:layout_gravity="center_horizontal" />
-
-    <Button
-        android:id="@+id/ToVehicle"
-        android:layout_width="wrap_content"
         android:layout_marginTop="80dp"
-        android:layout_marginEnd="32dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:text="Next ->" />
+        android:text="No. of food deliver orders per week"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout"
+        app:layout_constraintVertical_bias="1.0" />
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="320dp"
         android:gravity="center"
-        android:textSize="16dp"
-        android:text="How many food deliveries you order in a month?" />
+        android:orientation="horizontal"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout">
 
+        <Button
+            android:id="@+id/decrease"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:onClick="decreaseInteger"
+            android:text="-" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/integer_number"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="16dp"
+            android:text="0"
+            android:textSize="70sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/increase"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:onClick="increaseInteger"
+            android:text="+" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,28 +6,37 @@
     android:layout_height="match_parent"
     tools:context="com.example.mvp3.Flight">
 
-    <View
-        android:id="@+id/lineBtn"
+    <RelativeLayout
+        android:id="@+id/linear_layout"
         android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="#f2f2f2" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/SelectedVehicle"
-        android:text="You choice of vehicle"
-        android:textSize="18sp"
-        android:gravity="center"
-        android:layout_below="@+id/lineBtn"
-        android:layout_margin="16dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/txtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:layout_marginTop="40dp"
+            android:text="Mode of transport:"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
-    <NumberPicker
-        android:id="@+id/VehiclePicker"
-        android:layout_margin="60dp"
-        android:layout_centerHorizontal="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txtVw"
+            android:layout_alignParentRight="true"/>
+
+        <requestFocus />
+
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/howmanykms"
@@ -35,9 +44,10 @@
         android:textSize="18sp"
         android:gravity="center"
         android:layout_marginTop="300dp"
-        android:layout_marginStart="80dp"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+
 
     <com.google.android.material.slider.Slider
         android:id="@+id/kmsSlider"
